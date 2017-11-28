@@ -3,5 +3,6 @@ project(week7)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES tests.cpp catch_main.cpp)
-add_executable(run_tests ${SOURCE_FILES})
+add_executable(exercise1_tests tests.cpp catch_main.cpp)
+
+add_executable(exercise2_tests tests2.cpp catch_main.cpp)
