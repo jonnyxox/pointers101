@@ -4,13 +4,14 @@
 //   -- Add a member variable named p of type pointer-to-int to this struct
 //   -- Ensure that p has an appropriate default value
 struct example1 {
+    int* p = nullptr;
 };
 
 // Exercise 2
 //  -- Modify this function to return the value of the int that p points to
 inline int return_value(int* p)
 {
-    return 0;
+    return *p;
 }
 
 // Exercise 3
@@ -18,13 +19,14 @@ inline int return_value(int* p)
 //   -- Modify this function to return the *address* of i
 inline int* return_address(int& i)
 {
-    return nullptr;
+    return &i;
 }
 
 // Exercise 4
 //   -- Modify this function so that it sets the value of p's target to 12
 inline void set_to_twelve(int* p)
 {
+    *p = 12;
 }
 
 // Exercise 5
@@ -33,6 +35,9 @@ inline void set_to_twelve(int* p)
 //    Be careful, the test may crash if you get this wrong!
 inline void maybe_set_to_twelve(int* p)
 {
+    if (p) {
+        *p = 12;
+    }
 }
 
 // Exercise 6
@@ -42,4 +47,7 @@ inline void maybe_set_to_twelve(int* p)
 //     (NOT their target values!)
 inline void ptr_swap(int*& p1, int*& p2)
 {
+    int* temp = p1;
+    p1 = p2;
+    p2 = temp;
 }
