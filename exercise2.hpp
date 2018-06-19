@@ -8,7 +8,7 @@ struct example2 {
 
     // Add a member variable named pci of type "pointer to const int"
 
-
+const int * ptr = 5.0;
     // Add a member variable named cpi of type "const pointer to int"
 
 
